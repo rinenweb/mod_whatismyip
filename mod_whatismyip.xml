@@ -20,7 +20,7 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-				<field name="Greeting" type="text" default="You are connecting to this site from: " label="Greeting before IP" description="What text you would like to display before the IP" />
+				<field name="Greeting" type="text" default="You are connecting to this site from: " label="Text before IP" description="What text you would like to display before the IP" />
 			</fieldset>
 		</fields>
 	</config>
