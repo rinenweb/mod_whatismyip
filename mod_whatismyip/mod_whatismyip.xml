@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="4.0" method="upgrade" client="site">
+	<name>Module - What is my IP</name>
+	<author>Rinenweb</author>
+	<creationDate>August 2024</creationDate>
+	<license>GPL License v3</license>
+	<authorEmail>info@rinenweb.eu</authorEmail>
+	<authorUrl>https://www.rinenweb.eu</authorUrl>
+	<version>1.0</version>
+	<description>
+	<![CDATA[
+	<h2>What is my IP Module</h2>
+	This simple module shows the IP address of the current user browsing the site with a small greeting of your choice. <br/>
+	<br />
+	]]>
+	</description>
+	<files>
+		<filename module="mod_whatismyip">mod_whatismyip.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="Greeting" type="text" default="You are connecting to this site from: " label="Text before IP" description="What text you would like to display before the IP" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
