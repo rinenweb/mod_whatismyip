@@ -10,7 +10,7 @@
 	<description>
 	<![CDATA[
 	<h2>What is my IP Module</h2>
-	This simple module shows the IP address of the current user browsing the site with a small greeting of your choice. <br/>
+	This simple module shows the IP address of the current user browsing the site with a small intro text of your choice. <br/>
 	<br />
 	]]>
 	</description>
@@ -19,9 +19,12 @@
 	</files>
 	<config>
 		<fields name="params">
-			<fieldset name="basic">
-				<field name="Greeting" type="text" default="You are connecting to this site from: " label="Text before IP" description="What text you would like to display before the IP" />
-			</fieldset>
-		</fields>
+            <fieldset name="basic">
+                <field name="Greeting" type="text" default="Hello, your IP address is:" label="Intro Text" description="Enter the greeting message." />
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="moduleclass_sfx" type="text" label="Module Class Suffix" description="A suffix to be applied to the CSS class of the module. This allows for individual module styling." />
+            </fieldset>
+        </fields>
 	</config>
 </extension>
