@@ -2,11 +2,11 @@
 <extension type="module" version="4.0" method="upgrade" client="site">
 	<name>Module - What is my IP</name>
 	<author>Rinenweb</author>
-	<creationDate>August 2024</creationDate>
+	<creationDate>April 2026</creationDate>
 	<license>GPL License v3</license>
 	<authorEmail>info@rinenweb.eu</authorEmail>
 	<authorUrl>https://www.rinenweb.eu</authorUrl>
-	<version>1.0</version>
+	<version>1.1</version>
 	<description>
 	<![CDATA[
 	<h2>What is my IP Module</h2>
@@ -20,7 +20,7 @@
 	<config>
 		<fields name="params">
             <fieldset name="basic">
-                <field name="Greeting" type="text" default="Hello, your IP address is:" label="Intro Text" description="Enter the greeting message." />
+                <field name="greeting" type="text" default="Hello, your IP address is:" label="Intro Text" description="Enter the greeting message." />
             </fieldset>
             <fieldset name="advanced">
                 <field name="moduleclass_sfx" type="text" label="Module Class Suffix" description="A suffix to be applied to the CSS class of the module. This allows for individual module styling." />
