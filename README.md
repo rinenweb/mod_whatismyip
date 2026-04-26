@@ -6,6 +6,7 @@ What is my IP is a simple Joomla module that displays the visitor's IP Address.
 What is my IP Module is fairly simple and will (hopefully) play nice with:
 - [x] Joomla 4.X
 - [x] Joomla 5.X
+- [x] Joomla 6.X
 - [x] PHP 8.0+
 
 ## Installation
