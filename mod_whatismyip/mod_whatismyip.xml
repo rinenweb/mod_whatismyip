@@ -6,7 +6,7 @@
 	<license>GPL License v3</license>
 	<authorEmail>info@rinenweb.eu</authorEmail>
 	<authorUrl>https://www.rinenweb.eu</authorUrl>
-	<version>1.1</version>
+	<version>1.2</version>
 	<description>
 	<![CDATA[
 	<h2>What is my IP Module</h2>
@@ -20,9 +20,10 @@
 	<config>
 		<fields name="params">
             <fieldset name="basic">
-                <field name="greeting" type="text" default="Hello, your IP address is:" label="Intro Text" description="Enter the greeting message." />
+                <field name="greeting" type="text" default="Your IP address is:" label="Intro Text" description="Enter the greeting message." />
             </fieldset>
             <fieldset name="advanced">
+                <field name="cache" type="hidden" default="0" />
                 <field name="moduleclass_sfx" type="text" label="Module Class Suffix" description="A suffix to be applied to the CSS class of the module. This allows for individual module styling." />
             </fieldset>
         </fields>
