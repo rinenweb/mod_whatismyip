@@ -8,28 +8,19 @@
 
 defined('_JEXEC') or die;
 
-use Joomla\CMS\Factory;
+use Joomla\Utilities\IpHelper;
 
-class ModWhatIsMyIPHelper
-{
-    public static function getIP()
-    {
-        $app = Factory::getApplication();
+// IpHelper uses REMOTE_ADDR, and only trusts X-Forwarded-For / Client-IP headers
+// when "Behind Load Balancer" is enabled in Global Configuration.
+$ip = IpHelper::getIp();
 
-        if ($app->input->server->getString('HTTP_CLIENT_IP')) {
-            $ip = $app->input->server->getString('HTTP_CLIENT_IP');
-        } elseif ($app->input->server->getString('HTTP_X_FORWARDED_FOR')) {
-            $ip = $app->input->server->getString('HTTP_X_FORWARDED_FOR');
-        } else {
-            $ip = $app->input->server->getString('REMOTE_ADDR', 'UNKNOWN');
-        }
-
-        return $ip;
-    }
+if (!filter_var($ip, FILTER_VALIDATE_IP)) {
+    $ip = 'UNKNOWN';
 }
 
-// Usage
-$introtext = $params->get('Greeting');
-$content = $introtext . " " . ModWhatIsMyIPHelper::getIP();
+$greeting = (string) $params->get('greeting', 'Your IP address is:');
 
-echo $content;
+echo '<p class="mod-whatismyip">'
+    . htmlspecialchars($greeting, ENT_QUOTES, 'UTF-8') . ' '
+    . '<span class="mod-whatismyip__ip">' . htmlspecialchars($ip, ENT_QUOTES, 'UTF-8') . '</span>'
+    . '</p>';
